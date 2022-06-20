@@ -1,0 +1,113 @@
+/* This import Font */
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+
+/* This Root */
+:root {
+  --line-border-fill: #3498db;
+  --line-border-empty: #e0e0e0;
+}
+
+/* All Blocks */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f6f7fb;
+  font-family: "Muli", sans-serif;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.container {
+  text-align: center;
+}
+
+button {
+  background-color: var(--line-border-fill);
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: inherit;
+  padding: 8px 30px;
+  margin: 5px;
+  font-size: 14px;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+button:focus {
+    outline: 0;
+}
+
+button:disabled {
+    background-color: var(--line-border-empty);
+}
+/* All Blocks End */
+
+/* ***************************************************************************************************** */
+
+/* Progress Styling Start */
+.progress-container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 350px;
+  max-width: 100%;
+  margin-bottom: 30px;
+}
+
+.progress-container::before {
+  position: absolute;
+  content: "";
+  background-color: var(--line-border-empty);
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 4px;
+  width: 100%;
+  z-index: -1;
+}
+
+.progress {
+  position: absolute;
+  background-color: var(--line-border-fill);
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 4px;
+  width: 0%;
+  z-index: -1;
+  transition: 0.4s ease;
+}
+/* Progress Styling End */
+
+/* ***************************************************************************************************** */
+
+/* Cirlce Styling Start */
+.circle {
+  background-color: #fff;
+  color: #999;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid var(--line-border-empty);
+  transition: 0.4s ease;
+}
+
+.circle.active {
+  border-color: var(--line-border-fill);
+}
+/* Cirlce Styling End */
